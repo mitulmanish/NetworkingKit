@@ -3,6 +3,7 @@ import Foundation
 public typealias URLSessionNetworkResult = Result<Data, Error>
 
 public extension URLSession {
+    
     private func getResult(data: Data?, response: URLResponse?, error: Error?) -> URLSessionNetworkResult {
         switch (data, response, error) {
         case let (_, _, error?):

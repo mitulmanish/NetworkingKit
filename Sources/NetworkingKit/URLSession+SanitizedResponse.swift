@@ -7,6 +7,7 @@ public enum NetworkResult {
 }
 
 public extension URLSession {
+    
     func getData(request: URLRequest, dataResponse: @escaping (NetworkResult) -> ()) {
         dataTask(with: request) { (serverData, serverResponse, networkError) in
             let validStatusCodeRange: ClosedRange<Int> = 200...299
