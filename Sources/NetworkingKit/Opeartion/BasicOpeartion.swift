@@ -2,7 +2,7 @@
 
 import Foundation
 
-class BasicOperation: Operation {
+public class BasicOperation: Operation {
 
     enum State: String {
         case ready, executing, finished

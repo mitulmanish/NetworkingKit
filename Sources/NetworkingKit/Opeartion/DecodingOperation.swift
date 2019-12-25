@@ -9,7 +9,7 @@ protocol DecodableOperationType: class {
     associatedtype Provider: DecodingDataProvider
 }
 
-class DecodingOperation<Element, DataProvider>: BasicOperation, DecodableOperationType
+public class DecodingOperation<Element, DataProvider>: BasicOperation, DecodableOperationType
 where Element: Decodable, DataProvider: DecodingDataProvider {
     
     typealias DataType = Element

@@ -1,6 +1,6 @@
 import Foundation
 
-class NetworkOperation: BasicOperation, DecodingDataProvider {
+public class NetworkOperation: BasicOperation, DecodingDataProvider {
     private let session: URLSession
     private let urlRequest: URLRequest
     
