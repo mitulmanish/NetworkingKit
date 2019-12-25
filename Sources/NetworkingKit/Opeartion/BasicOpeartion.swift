@@ -24,15 +24,15 @@ public class BasicOperation: Operation {
         }
     }
 
-    override var isExecuting: Bool {
+    override public var isExecuting: Bool {
         return state == .executing
     }
 
-    override var isReady: Bool {
+    override public var isReady: Bool {
         return super.isReady && state == .ready
     }
 
-    override var isFinished: Bool {
+    override public var isFinished: Bool {
         return state == .finished
     }
 
@@ -44,7 +44,7 @@ public class BasicOperation: Operation {
         state = .finished
     }
 
-    override func start() {
+    override public func start() {
         if isCancelled {
             setFinished()
             return
@@ -53,7 +53,7 @@ public class BasicOperation: Operation {
         setExecuting()
     }
 
-    override func cancel() {
+    override public func cancel() {
         super.cancel()
         state = .finished
     }

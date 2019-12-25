@@ -7,7 +7,7 @@ public class NetworkOperation: BasicOperation, DecodingDataProvider {
     private (set) var data: Data?
     private (set) var error: Error?
 
-    override var isAsynchronous: Bool {
+    override public var isAsynchronous: Bool {
         return true
     }
     
@@ -16,7 +16,7 @@ public class NetworkOperation: BasicOperation, DecodingDataProvider {
         self.urlRequest = urlRequest
     }
     
-    override func main() {
+    override public func main() {
         session.getData(request: urlRequest) { [weak self] networkResult in
             guard let self = self else { return }
             switch networkResult {

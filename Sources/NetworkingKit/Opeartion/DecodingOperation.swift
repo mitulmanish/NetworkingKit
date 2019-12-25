@@ -17,11 +17,11 @@ where Element: Decodable, DataProvider: DecodingDataProvider {
     
     private(set) var decodedObject: DataType?
     
-    override var isAsynchronous: Bool {
+    override public var isAsynchronous: Bool {
         return true
     }
     
-    override func main() {
+    override public func main() {
         guard let dataToDecode = (dependencies.first { $0 is Provider } as? Provider)?.data else {
             setFinished()
             return
