@@ -1,3 +1,4 @@
 # NetworkingKit
 
-A description of this package.
+- Helps reduce boilerplate code while making network requests using `Combine`
+- `Combine` + `Generics` = 💪🏼
